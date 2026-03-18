@@ -1,0 +1,1 @@
+export const STEP_LABELS = ["Identificación", "Situacion Economica", "Prestamo"];
