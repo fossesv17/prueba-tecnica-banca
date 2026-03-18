@@ -3,10 +3,11 @@ import { useForm }      from "./hooks/useForm";
 import { useStepper } from "./hooks/useStepper";
 import { Stepper } from "./components/Stepper";
 import { StepIdentity, StepInfo, StepLoan } from "./components/steps";
+import { StepResult } from "./components/steps/StepResult";
 
 function App() {
   const { form, setField } = useForm();
-  const { step, result, goNext, goBack, goTo } = useStepper(form);
+  const { step, result, goNext, goBack } = useStepper(form);
 
   // const applicantName = [form.name, form.last_name].filter(Boolean).join(" ");
 
@@ -38,11 +39,11 @@ function App() {
               letterSpacing: "0.1em",
               textTransform: "uppercase",
             }}>
-              Credit Department
+              Banca.me
             </span>
           </div>
           <h1 style={{ fontSize: 26, fontWeight: 600, color: C.text, letterSpacing: "-0.02em", margin: 0 }}>
-            Financial Screening
+            Solicitud de credito
           </h1>
         </div>
 
@@ -63,6 +64,9 @@ function App() {
           )}
           {step === 2 && (
             <StepLoan data={form} onChange={setField} onNext={goNext} onBack={goBack} />
+          )}
+          {step === 3 && (
+            <StepResult result={result} onChange={setField} onBack={goBack} />
           )}
         </div>
       </div>

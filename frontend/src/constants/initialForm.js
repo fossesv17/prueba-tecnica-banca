@@ -11,7 +11,8 @@ export const INITIAL_FORM = {
     income: "",
     added: "",
     expenses: "",
+    debt: "",
     // Prestamo
-    type: "",
-    term: "",
+    loan_amount: "",
+    loan_rate: "",
 }

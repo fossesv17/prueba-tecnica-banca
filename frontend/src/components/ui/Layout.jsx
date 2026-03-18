@@ -29,7 +29,7 @@ export function FormGrid({ children }) {
   );
 }
 
-export function NavRow({ onBack, onNext, nextLabel = "Continue →" }) {
+export function NavRow({ onBack, onNext, nextLabel = "Continuar →" }) {
   return (
     <div style={{
       display:        "flex",
@@ -37,7 +37,7 @@ export function NavRow({ onBack, onNext, nextLabel = "Continue →" }) {
       marginTop:      "1.75rem",
       gap:            12,
     }}>
-      {onBack && <Btn secondary onClick={onBack}>← Back</Btn>}
+      {onBack && <Btn secondary onClick={onBack}>← Volver</Btn>}
       {onNext && <Btn onClick={onNext}>{nextLabel}</Btn>}
     </div>
   );

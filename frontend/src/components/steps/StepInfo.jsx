@@ -1,4 +1,4 @@
-import { Field, Input, Select, FormGrid, NavRow, SectionTitle } from "../ui";
+import { Field, Input, FormGrid, NavRow, SectionTitle } from "../ui";
 
 export function StepInfo({ data, onChange, onNext, onBack }) {
   const f = (key) => (e) => onChange(key, e.target.value);
@@ -22,6 +22,10 @@ export function StepInfo({ data, onChange, onNext, onBack }) {
 
         <Field label="Gastos (CLP)">
           <Input type="number" placeholder="500000" value={data.expenses} onChange={f("expenses")} />
+        </Field>
+
+        <Field label="Deuda">
+          <Input type="number" placeholder="100000" value={data.debt} onChange={f("debt")} />
         </Field>
       </FormGrid>
 
